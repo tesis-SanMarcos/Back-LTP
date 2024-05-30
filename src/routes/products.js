@@ -1,10 +1,10 @@
 import express from "express"
 import dataFake from "../data/products.js"
 
-const app = express()
+const route = express.Router()
 
-app.use('/products' , (req , res )=> {
+route.get('/products', (req,res) => {
     res.send(dataFake)
 })
 
-export default app
+export default route
